@@ -1,10 +1,12 @@
 ﻿using JWT_Test.Models;
 using JWT_Test.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace JWT_Test.Controllers
 {
+    [Authorize]
     [Route("api/employee")]
     [ApiController]
     public class EmployeeController : ControllerBase
